@@ -1,0 +1,1 @@
+import { MaquinetaLogo } from "../Icon";
