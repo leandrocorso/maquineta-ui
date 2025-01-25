@@ -8,13 +8,13 @@ export default {
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"), // Ajusta o caminho de saída
-    filename: "bundle.js", // Nome do arquivo de saída
+    filename: "index.js", // Nome do arquivo de saída
     clean: true, // Limpa a pasta dist antes do build
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // Processa arquivos TypeScript
+        test: /\.(png|jpe?g|gif|svg|ts|tsx)$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
