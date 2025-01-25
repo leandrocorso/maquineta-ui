@@ -1,1 +1,3 @@
-import { MaquinetaLogo } from "../Icon";
+import { ReactComponent as MaquinetaLogo } from "../../assets/maquineta-logo.svg";
+
+export default MaquinetaLogo;

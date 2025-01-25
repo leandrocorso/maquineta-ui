@@ -1,7 +1,7 @@
 import theme from "./theme";
 import ThemeWrapper from "./ThemeWrapper";
-import { MaquinetaLogo } from "./components/MaquinetaLogo";
+import MaquinetaLogo from "./components/MaquinetaLogo";
 
 export { theme, ThemeWrapper };
-export * from "./components/Icon";
-export { MaquinetaLogo };
+// export * from "./components/Icon";
+export default MaquinetaLogo;
