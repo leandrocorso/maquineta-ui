@@ -1,24 +1,24 @@
-import React, { ReactNode } from "react";
-import { Box, Container, styled, Theme } from "@mui/material";
+// import React, { ReactNode } from "react";
+// import { Box, Container, styled, Theme } from "@mui/material";
 
-import { Color } from "../../types";
+// import { Color } from "../../types";
 
-import { MaquinetaLogo } from "../Icon";
+// import { MaquinetaLogo } from "../MaquinetaLogo";
 
-interface BrandBarProps {
-  color?: Color;
-}
+// interface BrandBarProps {
+//   color?: Color;
+// }
 
-const Logo = styled(MaquinetaLogo)(
-  ({ theme, color }: { theme: Theme; color: Color }) => ({
-    fill: theme.palette[color].contrastText,
-  })
-);
+// const Logo = styled(MaquinetaLogo)(
+//   ({ theme, color }: { theme: Theme; color: Color }) => ({
+//     fill: theme.palette[color].contrastText,
+//   })
+// );
 
-export const BrandBar = ({ color = Color.primary }: BrandBarProps) => (
-  <Box sx={{ backgroundColor: (theme) => theme.palette[color].main }}>
-    <Container>
-      <Logo />
-    </Container>
-  </Box>
-);
+// export const BrandBar = ({ color = Color.primary }: BrandBarProps) => (
+//   <Box sx={{ backgroundColor: (theme) => theme.palette[color].main }}>
+//     <Container>
+//       <Logo />
+//     </Container>
+//   </Box>
+// );

@@ -1,3 +1,3 @@
-import { ReactComponent as MaquinetaLogo } from "../../assets/maquineta-logo.svg";
+import MaquinetaLogo from "../../assets/maquineta-logo.svg";
 
 export default MaquinetaLogo;

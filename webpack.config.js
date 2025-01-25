@@ -1,5 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import TerserWebpackPlugin from "terser-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -7,28 +9,45 @@ const __dirname = path.dirname(__filename);
 export default {
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"), // Ajusta o caminho de saída
-    filename: "index.js", // Nome do arquivo de saída
-    clean: true, // Limpa a pasta dist antes do build
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+    clean: true,
+    library: {
+      name: "maquineta-ui", // Nome da biblioteca
+      type: "umd", // Tipo de módulo (Universal Module Definition)
+    },
+    globalObject: "this", // Necessário para que funcione em ambientes como Node.js e browsers
   },
+  // plugins: [new BundleAnalyzerPlugin()],
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg|ts|tsx)$/,
-        use: "ts-loader",
+        test: /\.(ts|tsx)$/,
+        use: {
+          loader: "ts-loader",
+          options: {
+            configFile: path.resolve(__dirname, "tsconfig.json"),
+          },
+        },
         exclude: /node_modules/,
       },
       {
-        test: /\.svg$/, // Processa arquivos SVG
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
         type: "asset/resource",
         generator: {
-          filename: "assets/[name][ext]", // Salva SVGs na pasta assets
+          filename: "assets/[name][ext]",
         },
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"], // Extensões reconhecidas
+    extensions: [".tsx", ".ts", ".js"],
   },
-  mode: "production", // Define o modo de build
+  optimization: {
+    minimize: false,
+    minimizer: [new TerserWebpackPlugin()], // Garantindo que o Terser otimiza o bundle
+    usedExports: false,
+  },
+  mode: "production",
 };

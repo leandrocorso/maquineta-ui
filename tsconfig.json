@@ -3,11 +3,15 @@
     "outDir": "dist",
     "strict": true,
     "declaration": true,
+    "declarationMap": true, // Gera mapas de declaração
     "moduleResolution": "node",
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"]
 }
