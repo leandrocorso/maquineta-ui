@@ -1,5 +1,6 @@
-import { styled } from "@mui/material";
+import React from "react";
 import { icons } from "../../assets/icons";
+import { styled } from "@mui/material";
 import { Color } from "../../types";
 
 interface IconProps {
@@ -7,7 +8,7 @@ interface IconProps {
   color: Color;
 }
 
-export const Icon: React.FC<IconProps> = ({ image, color = Color.primary }) => {
+export const Icon: React.FC<IconProps> = ({ image, color = "primary" }) => {
   const SvgIcon = icons[image];
 
   if (!SvgIcon) {

@@ -1,6 +1,1 @@
-export enum Color {
-  primary = "primary",
-  secondary = "secondary",
-  green = "green",
-  yellow = "yellow",
-}
+export type Color = "primary" | "secondary" | "green" | "yellow";
