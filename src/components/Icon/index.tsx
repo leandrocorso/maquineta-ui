@@ -2,6 +2,7 @@ import React from "react";
 import { icons } from "../../assets/icons";
 // import { styled } from "@mui/material";
 import { Color } from "../../types";
+import { createTheme } from "@mui/system";
 
 interface IconProps {
   image: keyof typeof icons;
@@ -16,9 +17,10 @@ export const Icon: React.FC<IconProps> = ({ image, color = "primary" }) => {
     return null;
   }
 
+  const theme = createTheme();
   // const StyledIcon = styled(SvgIcon)(({ theme }) => ({
   //   fill: theme.palette[color].main,
   // }));
 
-  return <SvgIcon />;
+  return <SvgIcon fill={theme.palette[color].main} />;
 };
