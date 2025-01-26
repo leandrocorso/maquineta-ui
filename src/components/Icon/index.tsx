@@ -22,5 +22,5 @@ export const Icon: React.FC<IconProps> = ({ image, color = "primary" }) => {
   //   fill: theme.palette[color].main,
   // }));
 
-  return <SvgIcon fill={theme.palette[color].main} />;
+  return <SvgIcon style={{ fill: theme.palette[color].main }} />;
 };
