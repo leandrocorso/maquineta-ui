@@ -13,10 +13,10 @@ export default {
     filename: "index.js",
     clean: true,
     library: {
-      name: "maquineta-ui", // Nome da biblioteca
-      type: "umd", // Tipo de módulo (Universal Module Definition)
+      name: "maquineta-ui",
+      type: "umd",
     },
-    globalObject: "this", // Necessário para que funcione em ambientes como Node.js e browsers
+    globalObject: "this",
   },
   // plugins: [new BundleAnalyzerPlugin()],
   module: {
@@ -46,7 +46,7 @@ export default {
   },
   optimization: {
     minimize: false,
-    minimizer: [new TerserWebpackPlugin()], // Garantindo que o Terser otimiza o bundle
+    minimizer: [new TerserWebpackPlugin()],
     usedExports: false,
   },
   mode: "production",

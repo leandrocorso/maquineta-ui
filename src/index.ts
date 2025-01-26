@@ -5,4 +5,5 @@ import ThemeWrapper from "./ThemeWrapper";
 import MaquinetaLogo from "./components/MaquinetaLogo";
 import { Icon } from "./components/Icon";
 
+// exports
 export { theme, ThemeWrapper, MaquinetaLogo, Icon };

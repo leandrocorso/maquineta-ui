@@ -7,6 +7,11 @@
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    "*.ts",
+    "*.tsx",
+    "*.svg"
+  ],
   "scripts": {
     "build": "webpack --mode production"
   },
