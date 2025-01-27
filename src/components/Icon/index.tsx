@@ -18,6 +18,8 @@ export const Icon: React.FC<IconProps> = ({ image, color = "primary" }) => {
     return null;
   }
 
+  console.log("color", theme.palette[color].main);
+
   return (
     <ThemeWrapper>
       <SvgIcon style={{ fill: theme.palette[color].main }} />
